@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="MathWiz" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="MathWiz">
+         <Option output="/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/MathWiz" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.8" />
+            <Add directory="/usr/include/c++/4.8/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 MathWiz" />
+            <CompileFile command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="MathWiz/fast">
+         <Option output="/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/MathWiz" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.8" />
+            <Add directory="/usr/include/c++/4.8/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 MathWiz/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/media/storage/programming/yash101/repos/DevTech/MathWiz/build-MathWiz-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/media/storage/programming/yash101/repos/DevTech/MathWiz/MathWiz/lib/dlib/all/source.cpp">
+      </Unit>
+      <Unit filename="/media/storage/programming/yash101/repos/DevTech/MathWiz/MathWiz/main.cpp">
+      </Unit>
+      <Unit filename="/media/storage/programming/yash101/repos/DevTech/MathWiz/MathWiz/source/Bootloader.cxx">
+      </Unit>
+      <Unit filename="/media/storage/programming/yash101/repos/DevTech/MathWiz/MathWiz/source/MathProblem.cxx">
+      </Unit>
+      <Unit filename="/media/storage/programming/yash101/repos/DevTech/MathWiz/MathWiz/source/ProblemGen.cxx">
+      </Unit>
+      <Unit filename="/media/storage/programming/yash101/repos/DevTech/MathWiz/MathWiz/source/server.cxx">
+      </Unit>
+      <Unit filename="/media/storage/programming/yash101/repos/DevTech/MathWiz/MathWiz/include/Bootloader.hxx">
+      </Unit>
+      <Unit filename="/media/storage/programming/yash101/repos/DevTech/MathWiz/MathWiz/include/MathProblem.hxx">
+      </Unit>
+      <Unit filename="/media/storage/programming/yash101/repos/DevTech/MathWiz/MathWiz/include/definitions.hxx">
+      </Unit>
+      <Unit filename="/media/storage/programming/yash101/repos/DevTech/MathWiz/MathWiz/include/globals.hxx">
+      </Unit>
+      <Unit filename="/media/storage/programming/yash101/repos/DevTech/MathWiz/MathWiz/include/server.hxx">
+      </Unit>
+      <Unit filename="/media/storage/programming/yash101/repos/DevTech/MathWiz/MathWiz/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

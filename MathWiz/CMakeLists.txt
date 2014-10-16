@@ -1,0 +1,8 @@
+project(MathWiz)
+cmake_minimum_required(VERSION 2.8)
+#add_executable(${PROJECT_NAME} ${SRC_LIST} lib/dlib/all/source.cpp include/definitions.hxx source/server.cxx include/server.hxx source/ProblemGen.cxx include/globals.hxx include/Bootloader.hxx source/Bootloader.cxx)
+file (GLOB include_files "include/*.hxx")
+aux_source_directory(source source_files)
+add_executable(${PROJECT_NAME} lib/dlib/all/source.cpp main.cpp ${include_files} ${source_files})
+find_package(Threads REQUIRED)
+target_link_libraries(${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT})

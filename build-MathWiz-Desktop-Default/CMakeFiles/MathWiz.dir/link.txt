@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/MathWiz.dir/lib/dlib/all/source.cpp.o CMakeFiles/MathWiz.dir/main.cpp.o CMakeFiles/MathWiz.dir/source/Bootloader.cxx.o CMakeFiles/MathWiz.dir/source/ProblemGen.cxx.o CMakeFiles/MathWiz.dir/source/MathProblem.cxx.o CMakeFiles/MathWiz.dir/source/server.cxx.o  -o MathWiz -rdynamic -lpthread 
