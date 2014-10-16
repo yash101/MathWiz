@@ -1,2 +1,3 @@
 #Build folder for MathWiz
 build*
+*.user
