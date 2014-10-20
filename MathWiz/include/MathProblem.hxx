@@ -1,25 +1,33 @@
 #ifndef MATHPROBLEM_HXX
 #define MATHPROBLEM_HXX
+#include <vector>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
 namespace math
 {
-    typedef unsigned char function;
-    function OPERATOR_CODE_PLUS = (char) 0;
-    function OPERATOR_CODE_MINUS = (char) 1;
-    function OPERATOR_CODE_DIVIDE = (char) 2;
-    function OPERATOR_CODE_MULTIPLY = (char) 3;
+    enum function
+    {
+        OPERATOR_PLUS = 0,
+        OPERATOR_MINUS = 1,
+        OPERATOR_DIVISION = 2,
+        OPERATOR_MULTIPLICATION = 3
+    };
 
-    template<typename num1, typename num2>
     class MathProblem
     {
     private:
-        num1 numbera;
-        num2 numberb;
+        int numbera;
+        int numberb;
         function operator_code;
     public:
-        MathProblem(num1 numa, num2 numb, function opcode);
+        MathProblem(int numa, int numb, function opcode);
         function get_operator();
-        num1 get_number_a();
-        num2 get_number_b();
+        int get_number_a();
+        int get_number_b();
     };
+
+    std::vector<MathProblem> generate_math_problems(int min, int max, function opcode, unsigned long iterations);
+    std::vector<MathProblem> generate_math_problems(int min, int max, unsigned long iterations);
 }
 #endif // MATHPROBLEM_HXX

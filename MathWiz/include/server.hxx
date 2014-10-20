@@ -13,7 +13,5 @@ namespace server
     public:
         const std::string on_request(const dlib::incoming_things& incoming, dlib::outgoing_things& outgoing);
     };
-
-    const std::vector<math::MathProblem> generate_math_problems();
 }
 #endif // SERVER_HXX
