@@ -5,6 +5,6 @@
 namespace global
 {
     //The heart of the program!
-    server::MathWizServer MathWizServer;
+    static server::MathWizServer MathWizServer;
 }
 #endif // GLOBALS_HXX

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/main.css">
+		<script type="text/javascript" src="/main.js"></script>
+		<title>MathWiz 1.0</title>
+	</head>
+	<body>
+		<div id="title">MathWiz | Math Practice at your Hands!</div>
+		<div id="generator">
+			<table id="generator_main_table">
+				<tr>
+					<td id="generator_main_table_handle">Generate</td>
+				</tr>
+				<tr>
+					<td>Number!</td>
+				</tr>
+				<tr>
+					<td><input type="text" id="number_to_generate"></td>
+				</tr>
+				<tr>
+					<td><button onclick="javascript:loadAJAXPost('/gencards', encodeURI('number=' + document.getElementById('number_to_generate').value), function(x){document.getElementById('content').innerHTML = x;});">Go</button></td>
+				</tr>
+			</table>
+		</div>
+		<div id="content">
+			<div class="content_block">
+<!-- 				<span class="content-block-number">100</span>
+				<span class="content-block-numbera">xxx</span>
+				<span class="content-block-operator">+</span>
+				<span class="content-block-numberb">yyy</span>
+				<hr style="position: relative; top: 16px;" color="black"/>-->
+				<table style="position: relative; top: 0px; left: 0px; font-size: 28px;">
+					<tr>
+						<th style="min-width: 32px;"></th>
+						<th style="min-width: 84px;"></th>
+					</tr>
+					<tr>
+						<td style="font-size: 18px; color: #602571;">1:</td><td>x</td>
+					</tr>
+					<tr>
+						<td>+</td><td>y</td>
+					</tr>
+				</table>
+				<hr color="black"/>
+			</div>
+		</div>
+	</body>
+</html>

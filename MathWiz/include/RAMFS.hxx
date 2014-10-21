@@ -4,7 +4,11 @@
 #include <thread>
 #include <mutex>
 #include <fstream>
-#include "include/definitions.hxx"
+#include <vector>
+#include "definitions.hxx"
+#include <sstream>
+#include <iostream>
+
 namespace ramfs
 {
     bool stat_file(std::string file_location);
@@ -15,8 +19,24 @@ namespace ramfs
     class ramfs
     {
     private:
-        ramfs::ramfs filesystem;
+        std::unordered_map<std::string, std::string> filesystem;
+        std::timed_mutex mtx;
+
+        std::string get(std::string file_location);
+        void put(std::string file_location, std::string file_data);
+        bool stat_hid(std::string file_location);
     public:
+        bool cache_file(std::string file_location);
+        void cache_list(std::vector<std::string> file_locations);
+        bool stat(std::string file_location);
+        std::string get_file(std::string file_location);
+        std::string get_file_autocache(std::string file_location);
+        void put_file(std::string file_location, std::string file_data);
+        void put_file_async(std::string file_location, std::string file_data);
+        void put_file_async_on_disk(std::string file_location, std::string file_data);
+        void put_file_async_on_disk_async(std::string file_locationm, std::string file_data);
     };
+
+    static ramfs filesystem;
 }
 #endif // RAMFS_HXX

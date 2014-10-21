@@ -49,3 +49,55 @@ math::MathProblem::MathProblem(int numa, int numb, math::function opcode)
     numberb = numb;
     operator_code = opcode;
 }
+
+std::string math::MathProblem::to_string()
+{
+    std::stringstream string;
+    char op = '?';
+    if(operator_code == math::OPERATOR_DIVISION) op = '/';
+    if(operator_code == math::OPERATOR_MINUS) op = '-';
+    if(operator_code == math::OPERATOR_MULTIPLICATION) op = '*';
+    if(operator_code == math::OPERATOR_PLUS) op = '+';
+    string << numbera << " " << op << " " << numberb;
+    return string.str();
+}
+
+math::function math::MathProblem::get_operator()
+{
+    return operator_code;
+}
+
+int math::MathProblem::get_number_a()
+{
+    return numbera;
+}
+
+int math::MathProblem::get_number_b()
+{
+    return numberb;
+}
+
+std::string math::functionToString(function func)
+{
+    if(func == math::OPERATOR_DIVISION)
+    {
+        return "/";
+    }
+
+    if(func == math::OPERATOR_MINUS)
+    {
+        return "-";
+    }
+
+    if(func == math::OPERATOR_MULTIPLICATION)
+    {
+        return "x";
+    }
+
+    if(func == math::OPERATOR_PLUS)
+    {
+        return "+";
+    }
+
+    return ":(";
+}

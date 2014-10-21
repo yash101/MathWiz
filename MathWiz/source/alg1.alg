@@ -1,0 +1,5 @@
+[step]Start Server[/step]
+[step]When user asks for problems[/step]
+    [step]Generate math problems[/step]
+    [step]Generate HTML from template[/step]
+    [step]serve HTML[/step]

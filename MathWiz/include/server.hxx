@@ -2,6 +2,7 @@
 #define SERVER_HXX
 #include "../lib/dlib/server.h"
 #include "../lib/dlib/string.h"
+#include "RAMFS.hxx"
 #include <iostream>
 #include <string>
 #include <vector>
