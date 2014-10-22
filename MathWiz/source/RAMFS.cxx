@@ -51,7 +51,7 @@ void ramfs::ramfs::put(std::string file_location, std::string file_data)
     mtx.try_lock_for(std::chrono::milliseconds(TIMED_MUTEX_TIMEOUT));
     filesystem[file_location] = file_data;
     mtx.unlock();
-#endif;
+#endif
     return;
 }
 

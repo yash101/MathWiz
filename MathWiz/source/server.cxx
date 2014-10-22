@@ -40,9 +40,9 @@ const std::string server::MathWizServer::on_request(const dlib::incoming_things 
 
             int min = std::atoi(incoming.queries["minnum"].c_str());
             int max = std::atoi(incoming.queries["maxnum"].c_str());
-            if(min > max)
+            if(min > max || min == max)
             {
-                return "<div class=\"content_block\" style=\"background-color: red; color:green; width: 100%;\">Minimum number is greater than maximum number!</div>";
+                return "<div class=\"content_block\" style=\"background-color: red; color:green; width: 100%;\">Minimum number is greater than or equal to the maximum number!</div>";
             }
 
             std::vector<math::function> functions;
@@ -71,11 +71,22 @@ const std::string server::MathWizServer::on_request(const dlib::incoming_things 
                 return "<div class=\"content_block\" style=\"background-color: red; color:green; width: 100%;\">You must select at least one operator! Please fill out the operator selection to the right of this message!</div>";
             }
 
+            std::stringstream sout;
+#ifdef CAP_GEN
+            if(number > CAP_COUNT)
+            {
+                if(DETAILED_DEBUG)
+                {
+                    std::cout << "User tried to generate more than the capped value!" << std::endl;
+                    number = CAP_COUNT;
+                    sout << "<div class=\"content_block\" style=\"background-color: red; color:green;\">You have hit the generation cap!!</div>" << std::endl;
+                }
+            }
+#endif
             std::vector<math::MathProblem> problems = math::generate_math_problems(min, max, number, functions);
 
             statistics::update_gen_count(problems.size());
 
-            std::stringstream sout;
             std::cout << "Problems: " << problems.size() << std::endl;
             for(unsigned long i = 0; i < problems.size(); i++)
             {

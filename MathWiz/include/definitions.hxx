@@ -10,4 +10,6 @@
 #define FILECACHE_LOCATION "res/filecache.dat"      //The path to the filecache
 #define SERVER_PORT 6284                            //Main server listening port
 #define DISABLE_FILECACHE                           //Disable the RAMFS (only for development porpoises :D)
+#define CAP_GEN                                     //Cap maximum generation. Note that if you disable this, DDoS is possible and can deplete your
+#define CAP_COUNT 16384                             //server of resources. Set CAP_COUNT as the max you want one user to generate in one session!
 #endif                                              //End file

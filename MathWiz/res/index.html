@@ -40,10 +40,10 @@
 									<th>More Options</th>
 								</tr>
 								<tr>
-									<td><input type="text" id="minimum-number" placeholder="Minumum Number" style="width: 97%;"></td>
+									<td><input type="text" id="minimum-number" placeholder="Minumum Number" style="width: 97%;" required></td>
 								</tr>
 								<tr>
-									<td><input type="text" id="maximum-number" placeholder="Maximum Number" style="width: 97%;"></td>
+									<td><input type="text" id="maximum-number" placeholder="Maximum Number" style="width: 97%;" required></td>
 								</tr>
 							</table>
 						</td>
@@ -56,7 +56,7 @@
 								</tr>
 								<tr>
 									<td><button class="control_buttons">Go</button></td>
-									<td><button class="control_buttons" onmouseover="javascript:document.getElementById('mainfrm').setAttribute('action', '/print');" onmouseout="javascript:document.getElementById('mainfrm').setAttribute('action', 'javascript:newQuiz();');">Print</button></td>
+									<td><button class="control_buttons" onmouseover="javascript:document.getElementById('mainfrm').setAttribute('action', '/print');" onmouseout="javascript:document.getElementById('mainfrm').setAttribute('action', 'javascript:newQuiz();');" disabled>Print</button></td>
 								</tr>
 							</table>
 						</td>
@@ -65,7 +65,7 @@
 			</form>
 		</div>
 		<div id="content">
-			<div class="content_block">
+<!-- 		<div class="content_block">
 				<table id="content_block_tbl_1" class="content_block_tbl">
 					<tr>
 						<th style="min-width: 16px;"></th>
@@ -79,6 +79,9 @@
 					</tr>
 				</table>
 				<hr color="black"/>
+			</div> -->
+			<div class="content_block" style="width: 100%;">
+				<h1 style="text-align: center;">Please fill out the form to the left and click "Go" to begin!</h1>
 			</div>
 		</div>
 		<div id="title">MathWiz | Math Practice at your Hands!</div>
