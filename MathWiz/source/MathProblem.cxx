@@ -43,6 +43,35 @@ std::vector<math::MathProblem> math::generate_math_problems(int min, int max, un
     return problems;
 }
 
+std::vector<math::MathProblem> math::generate_math_problems(int min, int max, unsigned long iterations, std::vector<function> operators)
+{
+    std::vector<MathProblem> problems;
+    if(operators.size() == 0)
+    {
+        return problems;
+    }
+
+    for(unsigned int i = 0; i < iterations; i++)
+    {
+        int range = max - min;
+//        int numa = min + int (range * rand() / (RAND_MAX + 1.0));
+//        int numb = min + int (range * rand() / (RAND_MAX + 1.0));
+        int numa = rand() % max + min;
+        int numb = rand() % max + min;
+        int randop = rand() % operators.size();
+
+        problems.push_back(MathProblem(numa, numb, operators[randop]));
+    }
+
+    return problems;
+}
+
+std::vector<math::MathProblem> math::generate_math_problems(int min, int max, unsigned long iterations, std::vector<function> operators, float seed)
+{
+    srand(seed);
+    return generate_math_problems(min, max, iterations, operators);
+}
+
 math::MathProblem::MathProblem(int numa, int numb, math::function opcode)
 {
     numbera = numa;

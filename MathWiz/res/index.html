@@ -6,44 +6,82 @@
 		<title>MathWiz 1.0</title>
 	</head>
 	<body>
-		<div id="title">MathWiz | Math Practice at your Hands!</div>
 		<div id="generator">
-			<table id="generator_main_table">
-				<tr>
-					<td id="generator_main_table_handle">Generate</td>
-				</tr>
-				<tr>
-					<td>Number!</td>
-				</tr>
-				<tr>
-					<td><input type="text" id="number_to_generate"></td>
-				</tr>
-				<tr>
-					<td><button onclick="javascript:loadAJAXPost('/gencards', encodeURI('number=' + document.getElementById('number_to_generate').value), function(x){document.getElementById('content').innerHTML = x;});">Go</button></td>
-				</tr>
-			</table>
+			<form action="javascript:newQuiz();" id="mainfrm">
+				<table id="generator_main_table" method="POST">
+					<tr>
+						<td id="generator_main_table_handle">Quiz Creator!</td>
+					</tr>
+					<tr>
+						<td>
+							<table style="width: 100%; background-color: #C6C6C6; color: black;">
+								<tr>
+									<th>Operator Selection</th>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="operator_add">Addition</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="operator_multiply">Multiplication</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="operator_division">Division</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="operator_substraction">Substraction</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table style="width: 100%; background-color: #C6C6C6; color: black;">
+								<tr>
+									<th>More Options</th>
+								</tr>
+								<tr>
+									<td><input type="text" id="minimum-number" placeholder="Minumum Number" style="width: 97%;"></td>
+								</tr>
+								<tr>
+									<td><input type="text" id="maximum-number" placeholder="Maximum Number" style="width: 97%;"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table style="width: 100%; background-color: #C6C6C6; color: black;">
+								<tr>
+									<td colspan="2"><input type="text" id="number_to_generate" placeholder="How many do you want?"></td>
+								</tr>
+								<tr>
+									<td><button class="control_buttons">Go</button></td>
+									<td><button class="control_buttons" onmouseover="javascript:document.getElementById('mainfrm').setAttribute('action', '/print');" onmouseout="javascript:document.getElementById('mainfrm').setAttribute('action', 'javascript:newQuiz();');">Print</button></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</form>
 		</div>
 		<div id="content">
 			<div class="content_block">
-<!-- 				<span class="content-block-number">100</span>
-				<span class="content-block-numbera">xxx</span>
-				<span class="content-block-operator">+</span>
-				<span class="content-block-numberb">yyy</span>
-				<hr style="position: relative; top: 16px;" color="black"/>-->
-				<table style="position: relative; top: 0px; left: 0px; font-size: 28px;">
+				<table id="content_block_tbl_1" class="content_block_tbl">
 					<tr>
+						<th style="min-width: 16px;"></th>
 						<th style="min-width: 32px;"></th>
-						<th style="min-width: 84px;"></th>
 					</tr>
 					<tr>
-						<td style="font-size: 18px; color: #602571;">1:</td><td>x</td>
+						<td style="font-size: 18px; color: #602571;">1:</td><td style="text-align: right;">x</td>
 					</tr>
 					<tr>
-						<td>+</td><td>y</td>
+						<td>+</td><td style="text-align: right;">y</td>
 					</tr>
 				</table>
 				<hr color="black"/>
 			</div>
 		</div>
+		<div id="title">MathWiz | Math Practice at your Hands!</div>
+		<div id="footer">&copy; 2014-2015 Dev Lodha. Source code available for non-commercial purposes. Click <span style="color: red;" onclick="javascript:window.open('https://github.com/yash101/MathWiz', '_blank');">here</span> to hack!</div>
 	</body>
 </html>

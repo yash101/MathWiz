@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include "MathProblem.hxx"
+#include "statistics.hxx"
 namespace server
 {
     class MathWizServer : public dlib::server_http

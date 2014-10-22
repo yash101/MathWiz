@@ -1,3 +1,5 @@
 res/index.html
 res/main.css
 res/main.js
+stats/gencount.stat
+stats/reqcount.stat

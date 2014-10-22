@@ -32,7 +32,8 @@ namespace math
 
     std::vector<MathProblem> generate_math_problems(int min, int max, function opcode, unsigned long iterations);
     std::vector<MathProblem> generate_math_problems(int min, int max, unsigned long iterations);
-
+    std::vector<MathProblem> generate_math_problems(int min, int max, unsigned long iterations, std::vector<function> operators);
+    std::vector<MathProblem> generate_math_problems(int min, int max, unsigned long iterations, std::vector<function> operators, float seed);
     std::string functionToString(function func);
 }
 #endif // MATHPROBLEM_HXX
