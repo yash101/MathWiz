@@ -1,0 +1,12 @@
+﻿  source.cpp
+  main.cpp
+  Bootloader.cxx
+  LockedUnorderedMap.cxx
+  MathProblem.cxx
+..\..\..\MathWiz\source\MathProblem.cxx(71): warning C4244: 'argument' : conversion from 'float' to 'unsigned int', possible loss of data
+  RAMFS.cxx
+  server.cxx
+  statistics.cxx
+  Generating code
+  Finished generating code
+  MathWiz_nt.vcxproj -> C:\Users\Dev\Desktop\Desktop-FS\code\mathwiz\win\MathWiz_nt\Release\MathWiz_nt.exe
