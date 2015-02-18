@@ -2,12 +2,36 @@
 #include <iostream>
 #include "include/LockedUnorderedMap.hxx"
 
+#ifndef _WIN32
+#include <unistd.h>
+#include <sys/types.h>
+#endif
+
 #include "include/MathProblem.hxx"
 
 using namespace std;
 
 int main()
 {
+#ifndef _WIN32
+    pid_t p = fork();
+    if(p < 0)
+    {
+        std::cout << "Fork Failure!" << std::endl;
+    }
+    else
+    {
+        if(p == 0)
+        {
+            std::cout << "Child has been spawned! PID: [" << p << "]" << std::endl;
+        }
+        else if(p > 0)
+        {
+            std::cout << "Parent is Exiting! [" << p << "]" << std::endl;
+            exit(EXIT_SUCCESS);
+        }
+    }
+#endif
     boot::boot();
     std::vector<math::MathProblem> maths = math::generate_math_problems(1, 10, 0);
     for(unsigned int i = 0; i < maths.size(); i++)

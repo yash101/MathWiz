@@ -1,6 +1,6 @@
 project(MathWiz)
 cmake_minimum_required(VERSION 2.8)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -pthread -Wall")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -pthread -Wall -O3")
 file(GLOB include_files "include/*.hxx")
 file(GLOB include_files_devlib "lib/devlib/include/*.hxx")
 file(GLOB resource_files "res/*")
