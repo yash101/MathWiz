@@ -24,10 +24,13 @@ int main()
         if(p == 0)
         {
             std::cout << "Child has been spawned! PID: [" << p << "]" << std::endl;
+            fclose(stdin);
+            fclose(stdout);
+            fclose(stderr);
         }
-        else if(p > 0)
+        else
         {
-            std::cout << "Parent is Exiting! [" << p << "]" << std::endl;
+            std::cout << "Parent is Exiting! Child's PID is [" << p << "]" << std::endl;
             exit(EXIT_SUCCESS);
         }
     }
